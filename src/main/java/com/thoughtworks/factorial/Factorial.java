@@ -5,15 +5,27 @@ public class Factorial {
         if ((i == 1) || (i == 0)) {
             return 1;
         }
-        if (i == 2) {
-            return 2;
-        }
-        if (i == 3) {
-            return 6;
-        }
+
         if (i < 0) {
             throw new IllegalArgumentException();
         }
-        return -1;
+
+        int total = i;
+
+        for (int j = (i - 1); j > 0; j--) {
+            total = total * (i - 1);
+            i --;
+        }
+
+        if (total > 0){
+            return total;
+        } else {
+            return -1;
+        }
+    }
+
+    public static void main(String[] args) {
+        Factorial f = new Factorial();
+        f.compute(3);
     }
 }
