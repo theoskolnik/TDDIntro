@@ -38,6 +38,12 @@ public class FactorialTests {
         assertThat(factorial.compute(3), is(6));
     }
 
+    @Test
+    public void shouldReturnSevenTwentyWhenNumberIsSix(){
+        assertThat(factorial.compute(6), is(720));
+    }
+
+
     @Test(expected = IllegalArgumentException.class)
     public void shouldThrowIllegalArgumentExceptionWhenNumberIsNegative(){
         factorial.compute(-1);

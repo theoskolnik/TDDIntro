@@ -10,22 +10,15 @@ public class Factorial {
             throw new IllegalArgumentException();
         }
 
-        int total = i;
-
-        for (int j = (i - 1); j > 0; j--) {
-            total = total * (i - 1);
-            i --;
+        int total = 1;
+        for (int j = 2; j <= i; j++) {
+            total *= j;
         }
-
-        if (total > 0){
-            return total;
-        } else {
-            return -1;
-        }
+        return total;
     }
 
     public static void main(String[] args) {
         Factorial f = new Factorial();
-        f.compute(3);
+        f.compute(6);
     }
 }
